@@ -27,7 +27,7 @@ export default class EditRacquet extends Component{
       }
     
       componentDidMount() {
-        axios.get('http://localhost:5000/racquets/'+this.props.match.params.id)
+        axios.get('/racquets/'+this.props.match.params.id)
           .then(response => {
             this.setState({
               name: response.data.name,

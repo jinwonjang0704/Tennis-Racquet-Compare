@@ -26,7 +26,7 @@ export default class RacquetList extends Component{
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/racquets/')
+        axios.get('/racquets/')
         .then(response => {
             this.setState({ racquets: response.data })
         })
@@ -36,7 +36,7 @@ export default class RacquetList extends Component{
     }
 
     deleteRacquet(id) {
-        axios.delete('http://localhost:5000/racquets/'+id)
+        axios.delete('/racquets/'+id)
           .then(response => { console.log(response.data)});
     
         this.setState({

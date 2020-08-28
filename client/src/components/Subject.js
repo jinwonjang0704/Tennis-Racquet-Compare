@@ -31,7 +31,7 @@ class Subject extends Component {
       }
 
       componentDidMount() {
-        axios.get('http://localhost:5000/racquets/')
+        axios.get('/racquets/')
           .then(response => {
             this.setState({ racquets: response.data })
             console.log(this.state.racquets.length);

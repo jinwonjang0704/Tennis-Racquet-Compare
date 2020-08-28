@@ -75,7 +75,7 @@ export default class CreateRacquet extends Component{
 
         console.log(racquet);
 
-        axios.post('http://localhost:5000/racquets/add', racquet)
+        axios.post('/racquets/add', racquet)
             .then(res => console.log(res.data));
 
         window.location = "/";
