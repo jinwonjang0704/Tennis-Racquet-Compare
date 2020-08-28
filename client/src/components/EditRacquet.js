@@ -92,7 +92,7 @@ export default class EditRacquet extends Component{
     
         console.log(racquet);
     
-        axios.post('http://localhost:5000/racquets/update/' + this.props.match.params.id, racquet)
+        axios.post('/racquets/update/' + this.props.match.params.id, racquet)
           .then(res => console.log(res.data));
     
         window.location = '/';
