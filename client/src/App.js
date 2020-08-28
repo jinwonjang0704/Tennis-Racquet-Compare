@@ -20,10 +20,10 @@ class App extends Component{
   render(){
     return (
       <Router>
-        <Route path="/" exact component={() => <Subject name={this.state.name} statement1={this.state.statement1} statement2={this.state.statement2}/>} />
-        <Route path="/edit/:id" component={EditRacquet} />
-        <Route path="/create" component={() => <CreateRacquet name={this.state.name}/> } />
-        <Route path="/racquetlist" component={() => <RacquetList name={this.state.name}/> } />
+        <Route path="/#/" exact component={() => <Subject name={this.state.name} statement1={this.state.statement1} statement2={this.state.statement2}/>} />
+        <Route path="/#/edit/:id" component={EditRacquet} />
+        <Route path="/#/create" component={() => <CreateRacquet name={this.state.name}/> } />
+        <Route path="/#/racquetlist" component={() => <RacquetList name={this.state.name}/> } />
       </Router>
     );
   }
