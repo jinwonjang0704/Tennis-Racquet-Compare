@@ -10,7 +10,7 @@ const Racquet = props => (
       <td>{props.racquet.weight}</td>
       <td>{props.racquet.swingweight}</td>
       <td>
-        <Link to={"/edit/"+props.racquet._id}>edit</Link> | <a href="/" onClick={() => { props.deleteRacquet(props.racquet._id) }}>delete</a>
+        <Link to={"/#edit/"+props.racquet._id}>edit</Link> | <a href="/" onClick={() => { props.deleteRacquet(props.racquet._id) }}>delete</a>
       </td>
     </tr>
   )

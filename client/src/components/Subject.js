@@ -135,10 +135,10 @@ class Subject extends Component {
               <Link to="/" className="menu">Home</Link>
             </li>
             <li>
-              <Link to="/create" className="menu">Upload</Link>
+              <Link to="/#create" className="menu">Upload</Link>
             </li>
             <li>
-              <Link to="/racquetlist" className="menu">Racquet List</Link>
+              <Link to="/#racquetlist" className="menu">Racquet List</Link>
             </li>
           </ul>
         </nav>
