@@ -11,20 +11,22 @@ class Subject extends Component {
         this.lists1 = this.lists1.bind(this);
         this.onChangeRightGrid = this.onChangeRightGrid.bind(this);
 
+        var displayimage = 'https://media.istockphoto.com/vectors/tennis-icon-on-white-background-vector-id1051131134?k=6&m=1051131134&s=612x612&w=0&h=URXCpGkGir7cAooRQWAfIcnQgga6PbGMZlqaZ4cA2PI=';
+
         this.state = {
             lname: 'Racquet 1  ▼',
             lheadsize: 0,
             llength: 0,
             lweight: 0,
             lswingweight: 0,
-            limage: '',
+            limage: displayimage,
 
             rname: 'Racquet 2  ▼',
             rheadsize: 0,
             rlength: 0,
             rweight: 0,
             rswingweight: 0,
-            rimage: '',
+            rimage: displayimage,
 
             racquets: []
         }
@@ -51,7 +53,7 @@ class Subject extends Component {
             rlength: 0,
             rweight: 0,
             rswingweight: 0,
-            rimage: '',
+            rimage: displayimage,
           })
         }
         else{
@@ -76,7 +78,7 @@ class Subject extends Component {
             llength: 0,
             lweight: 0,
             lswingweight: 0,
-            limage: '',
+            limage: displayimage,
           })
         }
         else{
