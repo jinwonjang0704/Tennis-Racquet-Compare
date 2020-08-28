@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { HashRouter as Router, Route} from "react-router-dom";
 import Subject from "./components/Subject";
 import EditRacquet from "./components/EditRacquet";
 import CreateRacquet from "./components/CreateRacquet";
@@ -21,9 +21,9 @@ class App extends Component{
     return (
       <Router>
         <Route path="/" exact component={() => <Subject name={this.state.name} statement1={this.state.statement1} statement2={this.state.statement2}/>} />
-        <Route path="/#edit/:id" component={EditRacquet} />
-        <Route path="/#create" component={() => <CreateRacquet name={this.state.name}/> } />
-        <Route path="/#racquetlist" component={() => <RacquetList name={this.state.name}/> } />
+        <Route path="/edit/:id" component={EditRacquet} />
+        <Route path="/create" component={() => <CreateRacquet name={this.state.name}/> } />
+        <Route path="/racquetlist" component={() => <RacquetList name={this.state.name}/> } />
       </Router>
     );
   }
