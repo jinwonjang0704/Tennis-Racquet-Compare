@@ -72,7 +72,7 @@ export default class RacquetList extends Component{
             </nav>
 
             <h3>Registered Racquets</h3>
-            <table className="table">
+            <table className="racquetlist">
               <thead className="thead-light">
                 <tr>
                   <th class="list">Name</th>
