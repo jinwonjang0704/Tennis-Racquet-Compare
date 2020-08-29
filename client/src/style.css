@@ -162,6 +162,9 @@ th{
 .racquetlist td{
     min-width:150px;
 }
+.racquetlist{
+    margin-bottom: 50px;
+}
 
 
 #names{
