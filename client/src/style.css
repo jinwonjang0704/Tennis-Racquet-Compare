@@ -180,7 +180,8 @@ input[type=submit] {
 input[type=text], select {
   text-align:center;
   padding: 12px 20px;
-  margin: 20px 10px;
+  margin-top: 10px;
+  margin-bottom: 35px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -190,7 +191,7 @@ input[type=text], select {
 }
 form{
   padding-left: 500px;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .input-box{
@@ -205,6 +206,7 @@ form{
 img{
   height: 300px;
 }
+
 
 
 
