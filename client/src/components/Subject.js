@@ -165,7 +165,7 @@ class Subject extends Component {
         <div className="grid-container">
           <div className="grid-item" id="menu">
 
-           <select className="dropdownbutton" onChange={this.onChangeLeftGrid}>
+           <select className="dropdownbutton" onFocus='this.size=5;' onChange={this.onChangeLeftGrid}>
               {this.lists1(data)}
            </select>
 
