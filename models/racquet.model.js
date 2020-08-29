@@ -8,6 +8,8 @@ const racquetSchema = new Schema({
   length: { type: Number, required: true },
   weight: { type: Number, required: true },
   swingweight: { type: Number, required: true },
+  balancepoint: { type: String, required: true },
+  stringpattern: { type: String, required: true },
   image: {type: String, required: true}
 }, {
   timestamps: true,

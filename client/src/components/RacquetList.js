@@ -9,6 +9,8 @@ const Racquet = props => (
       <td>{props.racquet.length}</td>
       <td>{props.racquet.weight}</td>
       <td>{props.racquet.swingweight}</td>
+      <td>{props.racquet.balancepoint}</td>
+      <td>{props.racquet.stringpattern}</td>
       <td>
         <Link to={"/edit/"+props.racquet._id}>edit</Link> | <a href="/" onClick={() => { props.deleteRacquet(props.racquet._id) }}>delete</a>
       </td>
@@ -78,6 +80,8 @@ export default class RacquetList extends Component{
                   <th class="list">Length (in)</th>
                   <th class="list">Weight (gm)</th>
                   <th class="list">Swing Weight (kg*cm^2)</th>
+                  <th class="list">Balance Point</th>
+                  <th class="list">String Pattern</th>
                   <th class="list"></th>
                 </tr>
               </thead>

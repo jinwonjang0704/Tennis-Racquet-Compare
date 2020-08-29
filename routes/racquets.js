@@ -13,6 +13,8 @@ router.route('/add').post((req, res) => {
   const length = Number(req.body.length);
   const weight = Number(req.body.weight);
   const swingweight =  Number(req.body.swingweight);
+  const balancepoint = req.body.balancepoint;
+  const stringpattern = req.body.stringpattern;
   const image = req.body.image;
 
   const newRacquet = new Racquet({
@@ -21,6 +23,8 @@ router.route('/add').post((req, res) => {
     length,
     weight,
     swingweight,
+    balancepoint,
+    stringpattern,
     image,
   });
 
@@ -44,11 +48,13 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
   Racquet.findById(req.params.id)
     .then(racquet => {
-      racquet.name = req.body.name
+      racquet.name = req.body.name;
       racquet.headsize = Number(req.body.headsize);
       racquet.length = Number(req.body.length);
       racquet.weight = Number(req.body.weight);
       racquet.swingweight = Number(req.body.swingweight);
+      racquet.balancepoint = req.body.balancepoint;
+      racquet.stringpattern = req.body.stringpattern;
       racquet.image = req.body.image;
 
       racquet.save()

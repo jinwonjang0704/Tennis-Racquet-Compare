@@ -19,6 +19,8 @@ class Subject extends Component {
             llength: 0,
             lweight: 0,
             lswingweight: 0,
+            lbalancepoint: '0',
+            lstringpattern: '0',
             limage: displayimage,
 
             rname: 'Racquet 2  ▼',
@@ -26,6 +28,8 @@ class Subject extends Component {
             rlength: 0,
             rweight: 0,
             rswingweight: 0,
+            rbalancepoint: '0',
+            rstringpattern: '0',
             rimage: displayimage,
 
             racquets: []
@@ -53,6 +57,8 @@ class Subject extends Component {
             rlength: 0,
             rweight: 0,
             rswingweight: 0,
+            rbalancepoint: '0',
+            rstringpattern: '0',
             rimage: 'https://media.istockphoto.com/vectors/tennis-icon-on-white-background-vector-id1051131134?k=6&m=1051131134&s=612x612&w=0&h=URXCpGkGir7cAooRQWAfIcnQgga6PbGMZlqaZ4cA2PI=',
           })
         }
@@ -63,6 +69,8 @@ class Subject extends Component {
             rlength: data[i].length,
             rweight: data[i].weight,
             rswingweight: data[i].swingweight,
+            rbalancepoint: data[i].balancepoint,
+            rstringpattern: data[i].stringpattern,
             rimage: data[i].image,
           });
         }
@@ -78,6 +86,8 @@ class Subject extends Component {
             llength: 0,
             lweight: 0,
             lswingweight: 0,
+            lbalancepoint: '0',
+            lstringpattern: '0',
             limage: 'https://media.istockphoto.com/vectors/tennis-icon-on-white-background-vector-id1051131134?k=6&m=1051131134&s=612x612&w=0&h=URXCpGkGir7cAooRQWAfIcnQgga6PbGMZlqaZ4cA2PI=',
           })
         }
@@ -88,6 +98,8 @@ class Subject extends Component {
             llength: data[i].length,
             lweight: data[i].weight,
             lswingweight: data[i].swingweight,
+            lbalancepoint: data[i].balancepoint,
+            lstringpattern: data[i].stringpattern,
             limage: data[i].image,
           });
         }
@@ -190,6 +202,14 @@ class Subject extends Component {
                 <th>Swing Weight (kg*cm^2)</th>
                 <td id="ltd14">{this.state.lswingweight}</td>
               </tr>
+              <tr>
+                <th>Balance Point</th>
+                <td id="ltd15">{this.state.lbalancepoint}</td>
+              </tr>
+              <tr>
+                <th>String Pattern</th>
+                <td id="ltd16">{this.state.lstringpattern}</td>
+              </tr>
               </tbody>
             </table>
           </div>
@@ -210,7 +230,15 @@ class Subject extends Component {
               </tr>
               <tr>
                 <th>Swing Weight (kg*cm^2)</th>
-                <td id="rtd15">{this.state.rswingweight}</td>
+                <td id="rtd14">{this.state.rswingweight}</td>
+              </tr>
+              <tr>
+                <th>Balance Point</th>
+                <td id="rtd15">{this.state.rbalancepoint}</td>
+              </tr>
+              <tr>
+                <th>String Pattern</th>
+                <td id="rtd16">{this.state.rstringpattern}</td>
               </tr>
             </tbody>
             </table>

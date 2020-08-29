@@ -13,6 +13,8 @@ export default class EditRacquet extends Component{
         this.onChangeWeight = this.onChangeWeight.bind(this);
         this.onChangeHeadsize = this.onChangeHeadsize.bind(this);
         this.onChangeSwingWeight = this.onChangeSwingWeight.bind(this);
+        this.onChangeBalancePoint = this.onChangeBalancePoint.bind(this);
+        this.onChangeStringPattern = this.onChangeStringPattern.bind(this);
         this.onChangeImage = this.onChangeImage.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     
@@ -22,6 +24,8 @@ export default class EditRacquet extends Component{
           length: 0,
           weight: 0,
           swingweight: 0,
+          balancepoint: '0',
+          stringpattern:'0',
           image: '',
         }
       }
@@ -35,6 +39,8 @@ export default class EditRacquet extends Component{
               length: response.data.length,
               weight: response.data.weight,
               swingweight: response.data.swingweight,
+              balancepoint: response.data.balancepoint,
+              stringpattern: response.data.stringpattern,
               image: response.data.image,
             })
           })
@@ -72,6 +78,16 @@ export default class EditRacquet extends Component{
           swingweight: e.target.value
         })
       }
+      onChangeBalancePoint(e) {
+        this.setState({
+          balancepoint: e.target.value
+        })
+     }
+      onChangeStringPattern(e) {
+          this.setState({
+            stringpattern: e.target.value
+          })
+      }
       onChangeImage(e) {
         this.setState({
           image: e.target.value
@@ -87,6 +103,8 @@ export default class EditRacquet extends Component{
           length: this.state.length,
           weight: this.state.weight,
           swingweight: this.state.swingweight,
+          balancepoint: this.state.balancepoint,
+          stringpattern: this.state.stringpattern,
           image: this.state.image,
         }
     
@@ -165,6 +183,24 @@ render(){
               className="form-control"
               value={this.state.swingweight}
               onChange={this.onChangeSwingWeight}
+              />
+        </div>
+        <div className="form-group">
+          <label>Balance Point: </label>
+          <input  type="text"
+              required
+              className="form-control"
+              value={this.state.balancepoint}
+              onChange={this.onChangeBalancePoint}
+              />
+        </div>
+        <div className="form-group">
+          <label>String Pattern: </label>
+          <input  type="text"
+              required
+              className="form-control"
+              value={this.state.stringpattern}
+              onChange={this.onChangeStringPattern}
               />
         </div>
         <div className="form-group">
