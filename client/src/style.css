@@ -130,6 +130,7 @@ select:hover{
 
 .dropdownbutton{
   text-align:center;
+  margin: 20px 10px;
 }
 
 table{
