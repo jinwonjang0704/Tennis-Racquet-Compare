@@ -43,6 +43,10 @@ h3{
   min-width: 1300px;
 }
 
+.short-title{
+  min-width: 0px;
+}
+
 label.logo{
   color: white;
   font-size: 20px;

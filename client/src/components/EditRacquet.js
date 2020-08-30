@@ -135,7 +135,7 @@ render(){
             </li>
           </ul>
         </nav>
-        <h3>Edit Racquet</h3>
+        <h3 class="short-title">Edit Racquet</h3>
         <div class="input-box">
         <form onSubmit={this.onSubmit}>
           <div className="form-group">

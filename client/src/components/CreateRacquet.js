@@ -116,7 +116,7 @@ export default class CreateRacquet extends Component{
           </ul>
         </nav>
 
-      <h3>Upload New Racquets</h3>
+      <h3 class="short-title">Upload New Racquets</h3>
       <div class="input-box">
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
