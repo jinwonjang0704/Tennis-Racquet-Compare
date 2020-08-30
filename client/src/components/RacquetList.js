@@ -49,7 +49,6 @@ export default class RacquetList extends Component{
         })
         
         this.state.racquets.sort(compare);
-        console.log(this.state.racquets.length);
     }
 
     deleteRacquet(id) {
@@ -62,6 +61,7 @@ export default class RacquetList extends Component{
     }
 
     racquetList() {
+      console.log(this.state.racquets.length);
         return this.state.racquets.map(currentracquet => {
           return <Racquet racquet={currentracquet} deleteRacquet={this.deleteRacquet} key={currentracquet._id}/>;
         })
