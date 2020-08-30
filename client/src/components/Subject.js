@@ -125,10 +125,27 @@ class Subject extends Component {
     
   
     render(){
+      
 
       var lists1 = [];
       var lists2 = [];
       var data = this.state.racquets;
+
+      function compare(a, b) {
+        const racquetA = a.name.toUpperCase();
+        const racquetB = b.name.toUpperCase();
+      
+        let comparison = 0;
+        if (racquetA > racquetB) {
+          comparison = 1;
+        } else if (racquetA < racquetB) {
+          comparison = -1;
+        }
+        return comparison;
+      }
+
+      data.sort(compare);
+
       for(let index = 0; index < data.length; index++){
         lists1.push(<a key={index} href="/" onClick={
           (e) => this.onChangeLeftGrid(index, data, e)
@@ -164,7 +181,7 @@ class Subject extends Component {
         <div className="grid-container">
           <div className="grid-item" id="menu">
 
-           <select className="dropdownbutton" onFocus='this.size=5;' onChange={this.onChangeLeftGrid}>
+           <select className="dropdownbutton"  onChange={this.onChangeLeftGrid}>
               {this.lists1(data)}
            </select>
 
