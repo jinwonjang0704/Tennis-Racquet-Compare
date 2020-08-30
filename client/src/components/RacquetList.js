@@ -54,18 +54,24 @@ export default class RacquetList extends Component{
 
 
     render(){
-      function sortByProperty(property){  
-        return function(a,b){  
-            if(a[property] > b[property])  
-              return 1;  
-            else if(a[property] < b[property])  
-              return -1;  
-        
-            return 0;  
-        }  
+      function compare(a, b) {
+        const racquetA = a.name.toUpperCase();
+        const racquetB = b.name.toUpperCase();
+      
+        let comparison = 0;
+        if (racquetA > racquetB) {
+          comparison = 1;
+        } else if (racquetA < racquetB) {
+          comparison = -1;
+        }
+        return comparison;
       }
+
       this.state.racquets.sort(compare);
+
       console.log(this.state.racquets.length);
+
+
         return(
           <div>
             <nav>
