@@ -117,7 +117,6 @@ export default class CreateRacquet extends Component{
         </nav>
 
       <h3>Upload New Racquets</h3>
-      <div class="inputboxes">
       <div class="input-box">
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
@@ -197,7 +196,6 @@ export default class CreateRacquet extends Component{
           <input type="submit" value="Upload New Racquet" className="btn btn-primary" />
         </div>
       </form>
-      </div>
       </div>
     </div>        
     )
