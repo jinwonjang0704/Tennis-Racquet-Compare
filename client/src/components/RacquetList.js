@@ -41,7 +41,7 @@ export default class RacquetList extends Component{
         axios.get('/racquets/')
         .then(response => {
             this.setState({ racquets: response.data });
-            racquets.sortByProperty('name');
+            racquets.sort(sortByProperty("name"));
         })
         .catch((error) => {
             console.log(error);
