@@ -49,6 +49,7 @@ export default class RacquetList extends Component{
         })
         
         this.state.racquets.sort(compare);
+        console.log(this.state.racquets);
     }
 
     deleteRacquet(id) {
