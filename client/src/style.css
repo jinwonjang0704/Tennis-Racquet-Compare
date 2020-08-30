@@ -102,7 +102,6 @@ h2{
   grid-template-columns: auto auto;
   margin:80px 80px;
   margin-top:50px;
-
 }
 .grid-item{
   text-align: center;
@@ -230,6 +229,9 @@ img{
 @media (max-width: 740px){
   .logo{
     display:none;
+  }
+  .grid-container{
+    grid-template-rows: auto auto;
   }
 }
 
