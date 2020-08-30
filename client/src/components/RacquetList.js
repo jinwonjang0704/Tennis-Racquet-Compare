@@ -28,18 +28,6 @@ export default class RacquetList extends Component{
     }
 
     componentDidMount() {
-      function compare(a, b) {
-        const racquetA = a.name.toUpperCase();
-        const racquetB = b.name.toUpperCase();
-      
-        let comparison = 0;
-        if (racquetA > racquetB) {
-          comparison = 1;
-        } else if (racquetA < racquetB) {
-          comparison = -1;
-        }
-        return comparison;
-      }
         axios.get('/racquets/')
         .then(response => {
             this.setState({ racquets: response.data });
@@ -47,8 +35,6 @@ export default class RacquetList extends Component{
         .catch((error) => {
             console.log(error);
         })
-        
-        this.state.racquets.sort(compare);
     }
 
     deleteRacquet(id) {
@@ -61,7 +47,6 @@ export default class RacquetList extends Component{
     }
 
     racquetList() {
-      console.log(this.state.racquets.length);
         return this.state.racquets.map(currentracquet => {
           return <Racquet racquet={currentracquet} deleteRacquet={this.deleteRacquet} key={currentracquet._id}/>;
         })
@@ -79,6 +64,8 @@ export default class RacquetList extends Component{
             return 0;  
         }  
       }
+      this.state.racquets.sort(compare);
+      console.log(this.state.racquets.length);
         return(
           <div>
             <nav>
