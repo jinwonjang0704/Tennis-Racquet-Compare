@@ -203,6 +203,10 @@ form{
   padding-top: 40px;
 }
 
+.form-group{
+  text-align:center;
+}
+
 .input-box{
   width:1000px;
   clear: both;
