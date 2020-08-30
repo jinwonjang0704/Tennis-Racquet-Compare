@@ -45,7 +45,7 @@ export default class RacquetList extends Component{
         .catch((error) => {
             console.log(error);
         })
-        racquets.sort(sortByProperty("name"));
+        this.state.racquets.sort(sortByProperty("name"));
     }
 
     deleteRacquet(id) {
@@ -65,6 +65,16 @@ export default class RacquetList extends Component{
 
 
     render(){
+      function sortByProperty(property){  
+        return function(a,b){  
+            if(a[property] > b[property])  
+              return 1;  
+            else if(a[property] < b[property])  
+              return -1;  
+        
+            return 0;  
+        }  
+      }
         return(
           <div>
             <nav>
