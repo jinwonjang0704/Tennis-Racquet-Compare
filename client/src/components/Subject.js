@@ -40,7 +40,6 @@ class Subject extends Component {
         axios.get('/racquets/')
           .then(response => {
             this.setState({ racquets: response.data })
-            console.log(this.state.racquets.length);
           })
           .catch((error) => {
             console.log(error);
